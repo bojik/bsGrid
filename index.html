@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bsGrid</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bsGrid.js" charset="UTF-8"></script>
+    <script src="js/persons.js" charset="UTF-8"></script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<!-- Navbar
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="">
+                        <a href="./index.html">bsGrid</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<header class="jumbotron subhead" id="overview" style="padding-top: 40px;">
+    <div class="container">
+        <h1>bsGrid <span id="loading" style="text-decoration: blink;display: none;">Loading</span></h1>
+        <p class="lead">bsGrid - ajax bootstrap grid</p>
+    </div>
+</header>
+
+<div class="container">
+    <form class="form-search" id="person-filter" method="POST">
+        <div class="input-append">
+            <input type="text" name="text" class="span10" placeholder="ID, Name, Company">
+        </div>
+        <div class="input-append">
+            <button type="submit" class="btn">Search</button>
+        </div>
+    </form>
+    <table class="table table-hover table-bordered table-striped" id="persons">
+        <thead>
+            <tr>
+                <th data-field="id" data-sortname="id" style="width:10%;">Id</th>
+                <th data-field="name" data-sortname="name"  style="width:45%;">Name</th>
+                <th data-field="company" style="width:45%;">Company</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3" style="text-align: right;"></th>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="pagination persons-pager"></div>
+</div>
+<!-- Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <hr>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    </div>
+</footer>
+
+<div class="modal" id="windowDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Details</h3>
+    </div>
+    <div class="modal-body">
+
+    </div>
+</div>
+
+</body>
+</html>
